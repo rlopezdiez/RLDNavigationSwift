@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		459E1B881AAE606300EC3C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B6E1AAE606300EC3C51 /* AppDelegate.swift */; };
+		459E1B891AAE606300EC3C51 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459E1B6F1AAE606300EC3C51 /* LaunchScreen.xib */; };
+		459E1B8A1AAE606300EC3C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459E1B711AAE606300EC3C51 /* Main.storyboard */; };
+		459E1B8B1AAE606300EC3C51 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459E1B731AAE606300EC3C51 /* Images.xcassets */; };
+		459E1B8D1AAE606300EC3C51 /* RLDChatNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B761AAE606300EC3C51 /* RLDChatNavigationCommand.swift */; };
+		459E1B8E1AAE606300EC3C51 /* RLDConnectionsNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B771AAE606300EC3C51 /* RLDConnectionsNavigationCommand.swift */; };
+		459E1B8F1AAE606300EC3C51 /* RLDContactCardViewModelNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B781AAE606300EC3C51 /* RLDContactCardViewModelNavigationCommand.swift */; };
+		459E1B901AAE606300EC3C51 /* RLDFolderNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B791AAE606300EC3C51 /* RLDFolderNavigationCommand.swift */; };
+		459E1B911AAE606300EC3C51 /* RLDMenuNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B7A1AAE606300EC3C51 /* RLDMenuNavigationCommand.swift */; };
+		459E1B921AAE606300EC3C51 /* RLDNavigationCommandRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B7B1AAE606300EC3C51 /* RLDNavigationCommandRegistrar.swift */; };
+		459E1B931AAE606300EC3C51 /* RLDProfileNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B7C1AAE606300EC3C51 /* RLDProfileNavigationCommand.swift */; };
+		459E1B941AAE606300EC3C51 /* RLDNavigationSetup+RLDContactCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B7E1AAE606300EC3C51 /* RLDNavigationSetup+RLDContactCardViewModel.swift */; };
+		459E1B951AAE606300EC3C51 /* RLDNavigationSetup+URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B7F1AAE606300EC3C51 /* RLDNavigationSetup+URLs.swift */; };
+		459E1B961AAE606300EC3C51 /* RLDChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B811AAE606300EC3C51 /* RLDChatViewController.swift */; };
+		459E1B971AAE606300EC3C51 /* RLDConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B821AAE606300EC3C51 /* RLDConnectionsViewController.swift */; };
+		459E1B981AAE606300EC3C51 /* RLDContactCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B831AAE606300EC3C51 /* RLDContactCardViewController.swift */; };
+		459E1B991AAE606300EC3C51 /* RLDContactCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B841AAE606300EC3C51 /* RLDContactCardViewModel.swift */; };
+		459E1B9A1AAE606300EC3C51 /* RLDFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B851AAE606300EC3C51 /* RLDFolderViewController.swift */; };
+		459E1B9B1AAE606300EC3C51 /* RLDMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B861AAE606300EC3C51 /* RLDMenuViewController.swift */; };
+		459E1B9C1AAE606300EC3C51 /* RLDProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B871AAE606300EC3C51 /* RLDProfileViewController.swift */; };
+		459E1BA91AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B9F1AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift */; };
+		459E1BAA1AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA01AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift */; };
+		459E1BAB1AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA11AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift */; };
+		459E1BAC1AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA21AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift */; };
+		459E1BAD1AAE60AC00EC3C51 /* RLDNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA31AAE60AC00EC3C51 /* RLDNavigationCommand.swift */; };
+		459E1BAE1AAE60AC00EC3C51 /* RLDNavigationCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA41AAE60AC00EC3C51 /* RLDNavigationCommandFactory.swift */; };
+		459E1BAF1AAE60AC00EC3C51 /* RLDNavigationSetup+RLDNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA51AAE60AC00EC3C51 /* RLDNavigationSetup+RLDNavigationCommand.swift */; };
+		459E1BB01AAE60AC00EC3C51 /* RLDNavigationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA61AAE60AC00EC3C51 /* RLDNavigationSetup.swift */; };
+		459E1BB11AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA71AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift */; };
+		459E1BB21AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA81AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		45537D651AAA7A3D0043F2D8 /* NavigationPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		459E1B6E1AAE606300EC3C51 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		459E1B701AAE606300EC3C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		459E1B721AAE606300EC3C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		459E1B731AAE606300EC3C51 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		459E1B741AAE606300EC3C51 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		459E1B761AAE606300EC3C51 /* RLDChatNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDChatNavigationCommand.swift; sourceTree = "<group>"; };
+		459E1B771AAE606300EC3C51 /* RLDConnectionsNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDConnectionsNavigationCommand.swift; sourceTree = "<group>"; };
+		459E1B781AAE606300EC3C51 /* RLDContactCardViewModelNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDContactCardViewModelNavigationCommand.swift; sourceTree = "<group>"; };
+		459E1B791AAE606300EC3C51 /* RLDFolderNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDFolderNavigationCommand.swift; sourceTree = "<group>"; };
+		459E1B7A1AAE606300EC3C51 /* RLDMenuNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDMenuNavigationCommand.swift; sourceTree = "<group>"; };
+		459E1B7B1AAE606300EC3C51 /* RLDNavigationCommandRegistrar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDNavigationCommandRegistrar.swift; sourceTree = "<group>"; };
+		459E1B7C1AAE606300EC3C51 /* RLDProfileNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDProfileNavigationCommand.swift; sourceTree = "<group>"; };
+		459E1B7E1AAE606300EC3C51 /* RLDNavigationSetup+RLDContactCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLDNavigationSetup+RLDContactCardViewModel.swift"; sourceTree = "<group>"; };
+		459E1B7F1AAE606300EC3C51 /* RLDNavigationSetup+URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLDNavigationSetup+URLs.swift"; sourceTree = "<group>"; };
+		459E1B811AAE606300EC3C51 /* RLDChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDChatViewController.swift; sourceTree = "<group>"; };
+		459E1B821AAE606300EC3C51 /* RLDConnectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDConnectionsViewController.swift; sourceTree = "<group>"; };
+		459E1B831AAE606300EC3C51 /* RLDContactCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDContactCardViewController.swift; sourceTree = "<group>"; };
+		459E1B841AAE606300EC3C51 /* RLDContactCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDContactCardViewModel.swift; sourceTree = "<group>"; };
+		459E1B851AAE606300EC3C51 /* RLDFolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDFolderViewController.swift; sourceTree = "<group>"; };
+		459E1B861AAE606300EC3C51 /* RLDMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDMenuViewController.swift; sourceTree = "<group>"; };
+		459E1B871AAE606300EC3C51 /* RLDProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDProfileViewController.swift; sourceTree = "<group>"; };
+		459E1B9F1AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDBreadcrumbNavigationCommand.swift; sourceTree = "<group>"; };
+		459E1BA01AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLDDirectNavigationCommand+PathSearching.swift"; sourceTree = "<group>"; };
+		459E1BA11AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDDirectNavigationCommand.swift; sourceTree = "<group>"; };
+		459E1BA21AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLDNavigationCommand+NavigationCommandRegister.swift"; sourceTree = "<group>"; };
+		459E1BA31AAE60AC00EC3C51 /* RLDNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDNavigationCommand.swift; sourceTree = "<group>"; };
+		459E1BA41AAE60AC00EC3C51 /* RLDNavigationCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDNavigationCommandFactory.swift; sourceTree = "<group>"; };
+		459E1BA51AAE60AC00EC3C51 /* RLDNavigationSetup+RLDNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLDNavigationSetup+RLDNavigationCommand.swift"; sourceTree = "<group>"; };
+		459E1BA61AAE60AC00EC3C51 /* RLDNavigationSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDNavigationSetup.swift; sourceTree = "<group>"; };
+		459E1BA71AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDPushPopNavigationCommand.swift; sourceTree = "<group>"; };
+		459E1BA81AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+RLDNavigationSetup.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45537D621AAA7A3D0043F2D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45537D5C1AAA7A3D0043F2D8 = {
+			isa = PBXGroup;
+			children = (
+				459E1B9E1AAE60AC00EC3C51 /* RLDNavigationSwift */,
+				459E1B6D1AAE606300EC3C51 /* Navigation prototype */,
+				45537D661AAA7A3D0043F2D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45537D661AAA7A3D0043F2D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45537D651AAA7A3D0043F2D8 /* NavigationPrototype.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		459E1B6D1AAE606300EC3C51 /* Navigation prototype */ = {
+			isa = PBXGroup;
+			children = (
+				459E1B7D1AAE606300EC3C51 /* Navigation setup */,
+				459E1B751AAE606300EC3C51 /* Navigation commands */,
+				459E1B801AAE606300EC3C51 /* View controllers */,
+				459E1B9D1AAE607600EC3C51 /* Supporting Files */,
+			);
+			path = "Navigation prototype";
+			sourceTree = "<group>";
+		};
+		459E1B751AAE606300EC3C51 /* Navigation commands */ = {
+			isa = PBXGroup;
+			children = (
+				459E1B7B1AAE606300EC3C51 /* RLDNavigationCommandRegistrar.swift */,
+				459E1B7A1AAE606300EC3C51 /* RLDMenuNavigationCommand.swift */,
+				459E1B791AAE606300EC3C51 /* RLDFolderNavigationCommand.swift */,
+				459E1B771AAE606300EC3C51 /* RLDConnectionsNavigationCommand.swift */,
+				459E1B7C1AAE606300EC3C51 /* RLDProfileNavigationCommand.swift */,
+				459E1B761AAE606300EC3C51 /* RLDChatNavigationCommand.swift */,
+				459E1B781AAE606300EC3C51 /* RLDContactCardViewModelNavigationCommand.swift */,
+			);
+			path = "Navigation commands";
+			sourceTree = "<group>";
+		};
+		459E1B7D1AAE606300EC3C51 /* Navigation setup */ = {
+			isa = PBXGroup;
+			children = (
+				459E1B7E1AAE606300EC3C51 /* RLDNavigationSetup+RLDContactCardViewModel.swift */,
+				459E1B7F1AAE606300EC3C51 /* RLDNavigationSetup+URLs.swift */,
+			);
+			path = "Navigation setup";
+			sourceTree = "<group>";
+		};
+		459E1B801AAE606300EC3C51 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				459E1B861AAE606300EC3C51 /* RLDMenuViewController.swift */,
+				459E1B851AAE606300EC3C51 /* RLDFolderViewController.swift */,
+				459E1B821AAE606300EC3C51 /* RLDConnectionsViewController.swift */,
+				459E1B811AAE606300EC3C51 /* RLDChatViewController.swift */,
+				459E1B871AAE606300EC3C51 /* RLDProfileViewController.swift */,
+				459E1B831AAE606300EC3C51 /* RLDContactCardViewController.swift */,
+				459E1B841AAE606300EC3C51 /* RLDContactCardViewModel.swift */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		459E1B9D1AAE607600EC3C51 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				459E1B6E1AAE606300EC3C51 /* AppDelegate.swift */,
+				459E1B6F1AAE606300EC3C51 /* LaunchScreen.xib */,
+				459E1B711AAE606300EC3C51 /* Main.storyboard */,
+				459E1B731AAE606300EC3C51 /* Images.xcassets */,
+				459E1B741AAE606300EC3C51 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		459E1B9E1AAE60AC00EC3C51 /* RLDNavigationSwift */ = {
+			isa = PBXGroup;
+			children = (
+				459E1BA61AAE60AC00EC3C51 /* RLDNavigationSetup.swift */,
+				459E1BA51AAE60AC00EC3C51 /* RLDNavigationSetup+RLDNavigationCommand.swift */,
+				459E1BA81AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift */,
+				459E1BA41AAE60AC00EC3C51 /* RLDNavigationCommandFactory.swift */,
+				459E1BA31AAE60AC00EC3C51 /* RLDNavigationCommand.swift */,
+				459E1BA21AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift */,
+				459E1B9F1AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift */,
+				459E1BA01AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift */,
+				459E1BA11AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift */,
+				459E1BA71AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift */,
+			);
+			name = RLDNavigationSwift;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45537D641AAA7A3D0043F2D8 /* NavigationPrototype */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45537D841AAA7A3D0043F2D8 /* Build configuration list for PBXNativeTarget "NavigationPrototype" */;
+			buildPhases = (
+				45537D611AAA7A3D0043F2D8 /* Sources */,
+				45537D621AAA7A3D0043F2D8 /* Frameworks */,
+				45537D631AAA7A3D0043F2D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NavigationPrototype;
+			productName = "Navigation prototype";
+			productReference = 45537D651AAA7A3D0043F2D8 /* NavigationPrototype.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45537D5D1AAA7A3D0043F2D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Rafael Lopez Diez";
+				TargetAttributes = {
+					45537D641AAA7A3D0043F2D8 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 45537D601AAA7A3D0043F2D8 /* Build configuration list for PBXProject "NavigationPrototype" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45537D5C1AAA7A3D0043F2D8;
+			productRefGroup = 45537D661AAA7A3D0043F2D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45537D641AAA7A3D0043F2D8 /* NavigationPrototype */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45537D631AAA7A3D0043F2D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459E1B8B1AAE606300EC3C51 /* Images.xcassets in Resources */,
+				459E1B891AAE606300EC3C51 /* LaunchScreen.xib in Resources */,
+				459E1B8A1AAE606300EC3C51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45537D611AAA7A3D0043F2D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459E1B881AAE606300EC3C51 /* AppDelegate.swift in Sources */,
+				459E1BA91AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift in Sources */,
+				459E1BB21AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift in Sources */,
+				459E1B931AAE606300EC3C51 /* RLDProfileNavigationCommand.swift in Sources */,
+				459E1B901AAE606300EC3C51 /* RLDFolderNavigationCommand.swift in Sources */,
+				459E1B9B1AAE606300EC3C51 /* RLDMenuViewController.swift in Sources */,
+				459E1B941AAE606300EC3C51 /* RLDNavigationSetup+RLDContactCardViewModel.swift in Sources */,
+				459E1BAD1AAE60AC00EC3C51 /* RLDNavigationCommand.swift in Sources */,
+				459E1BAF1AAE60AC00EC3C51 /* RLDNavigationSetup+RLDNavigationCommand.swift in Sources */,
+				459E1BAB1AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift in Sources */,
+				459E1B8F1AAE606300EC3C51 /* RLDContactCardViewModelNavigationCommand.swift in Sources */,
+				459E1B951AAE606300EC3C51 /* RLDNavigationSetup+URLs.swift in Sources */,
+				459E1B9A1AAE606300EC3C51 /* RLDFolderViewController.swift in Sources */,
+				459E1B961AAE606300EC3C51 /* RLDChatViewController.swift in Sources */,
+				459E1BAE1AAE60AC00EC3C51 /* RLDNavigationCommandFactory.swift in Sources */,
+				459E1B971AAE606300EC3C51 /* RLDConnectionsViewController.swift in Sources */,
+				459E1B981AAE606300EC3C51 /* RLDContactCardViewController.swift in Sources */,
+				459E1B8D1AAE606300EC3C51 /* RLDChatNavigationCommand.swift in Sources */,
+				459E1B921AAE606300EC3C51 /* RLDNavigationCommandRegistrar.swift in Sources */,
+				459E1BAC1AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift in Sources */,
+				459E1B8E1AAE606300EC3C51 /* RLDConnectionsNavigationCommand.swift in Sources */,
+				459E1B991AAE606300EC3C51 /* RLDContactCardViewModel.swift in Sources */,
+				459E1B9C1AAE606300EC3C51 /* RLDProfileViewController.swift in Sources */,
+				459E1BAA1AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift in Sources */,
+				459E1B911AAE606300EC3C51 /* RLDMenuNavigationCommand.swift in Sources */,
+				459E1BB11AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift in Sources */,
+				459E1BB01AAE60AC00EC3C51 /* RLDNavigationSetup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		459E1B6F1AAE606300EC3C51 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				459E1B701AAE606300EC3C51 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		459E1B711AAE606300EC3C51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				459E1B721AAE606300EC3C51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45537D821AAA7A3D0043F2D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45537D831AAA7A3D0043F2D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45537D851AAA7A3D0043F2D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Navigation prototype/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = NavigationPrototype;
+			};
+			name = Debug;
+		};
+		45537D861AAA7A3D0043F2D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Navigation prototype/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = NavigationPrototype;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45537D601AAA7A3D0043F2D8 /* Build configuration list for PBXProject "NavigationPrototype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45537D821AAA7A3D0043F2D8 /* Debug */,
+				45537D831AAA7A3D0043F2D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45537D841AAA7A3D0043F2D8 /* Build configuration list for PBXNativeTarget "NavigationPrototype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45537D851AAA7A3D0043F2D8 /* Debug */,
+				45537D861AAA7A3D0043F2D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45537D5D1AAA7A3D0043F2D8 /* Project object */;
+}

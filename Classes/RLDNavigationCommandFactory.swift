@@ -1,0 +1,20 @@
+class RLDNavigationCommandFactory {
+    
+    class func navigationCommand(#navigationSetup:RLDNavigationSetup) -> RLDNavigationCommand? {
+        // We check if we are already at the destination
+        let viewControllerToReturnTo = navigationSetup.navigationController.findDestination(navigationSetup:navigationSetup)
+        if viewControllerToReturnTo != nil
+            && viewControllerToReturnTo == navigationSetup.navigationController.topViewController {
+                return nil
+        }
+        
+        let breadcrumbs = navigationSetup.breadcrumbs
+        if breadcrumbs != nil && breadcrumbs!.count > 0 {
+            return RLDBreadcrumbNavigationCommand(navigationSetup:navigationSetup)
+        }
+        else {
+            return RLDDirectNavigationCommand(navigationSetup:navigationSetup)
+        }
+    }
+    
+}
