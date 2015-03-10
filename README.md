@@ -6,7 +6,7 @@ If you want to adhere to the single responsibility principle of object-oriented 
 
 It implements routing using breadth-first search to resolve complex paths. It also prevents navigation cycles like `A > B > C > B`. A sample app is included.
 
-> [Onjective-C version](https://github.com/rlopezdiez/RLDNavigation) also available.
+> [Objective-C version](https://github.com/rlopezdiez/RLDNavigation) also available.
 
 ## How to use
 
