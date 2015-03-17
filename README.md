@@ -6,6 +6,7 @@ If you want to adhere to the single responsibility principle of object-oriented 
 
 It implements routing using breadth-first search to resolve complex paths. It also prevents navigation cycles like `A > B > C > B`. A sample app is included.
 
+> Requires XCode Version 6.3 (6D543q) or newer.
 > [Objective-C version](https://github.com/rlopezdiez/RLDNavigation) also available.
 
 ## How to use
@@ -128,7 +129,7 @@ In the unlikely event that you want to use an URL-like navigation scheme, you ca
 To use the latest stable release of `RLDNavigationSwift`, just add the following to your project `Podfile`:
 
 ```
-pod 'RLDNavigationSwift', '~> 0.3.0' 
+pod 'RLDNavigationSwift', '~> 0.3.1' 
 ```
 
 If you like to live on the bleeding edge, you can use the `master` branch with:
