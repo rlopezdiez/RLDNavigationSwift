@@ -1,12 +1,6 @@
 import UIKit
 
 class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
-    
-    // MARK:Initialisation
-    
-    override required init?(navigationSetup:RLDNavigationSetup) {
-        super.init(navigationSetup: navigationSetup)
-    }
 
     // MARK: Suitability checking
     
