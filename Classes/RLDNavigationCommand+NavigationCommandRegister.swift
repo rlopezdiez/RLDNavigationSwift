@@ -8,6 +8,10 @@ extension RLDNavigationCommand {
         _availableCommandClasses.append(NSStringFromClass(self))
     }
     
+    class func clearRegisteredCommandClasses() {
+        _availableCommandClasses = []
+    }
+    
     var availableCommandClasses:[String] {
         return self.dynamicType._availableCommandClasses
     }

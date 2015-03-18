@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'RLDNavigationSwift'
-  s.version      = '0.3.1'
+  s.version      = '0.4.0'
   s.homepage     = 'https://github.com/rlopezdiez/RLDNavigationSwift.git'
   s.summary      = 'Framework to decouple navigation from view controllers, written in Swift'
   s.authors      = { 'Rafael Lopez Diez' => 'https://www.linkedin.com/in/rafalopezdiez' }

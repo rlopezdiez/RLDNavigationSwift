@@ -129,7 +129,7 @@ In the unlikely event that you want to use an URL-like navigation scheme, you ca
 To use the latest stable release of `RLDNavigationSwift`, just add the following to your project `Podfile`:
 
 ```
-pod 'RLDNavigationSwift', '~> 0.3.1' 
+pod 'RLDNavigationSwift', '~> 0.4.0' 
 ```
 
 If you like to live on the bleeding edge, you can use the `master` branch with:
