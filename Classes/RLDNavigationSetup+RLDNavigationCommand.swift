@@ -1,7 +1,11 @@
 extension RLDNavigationSetup {
 
     func go() {
-        if let navigationCommand = RLDNavigationCommandFactory.navigationCommand(navigationSetup:self) {
+        go(completionClosure:nil)
+    }
+    
+    func go(#completionClosure:(() -> Void)?) {
+        if let navigationCommand = RLDNavigationCommandFactory.navigationCommand(navigationSetup:self, completionClosure:completionClosure) {
             navigationCommand.execute()
         }
     }

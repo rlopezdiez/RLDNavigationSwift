@@ -58,7 +58,7 @@ struct RLDNavigationSetup {
         properties:[String:AnyObject]?,
         breadcrumbs:[String]?,
         navigationController:UINavigationController) {
-            let origin:String = NSStringFromClass(navigationController.topViewController!.dynamicType)
+            let origin = NSStringFromClass(navigationController.topViewController!.dynamicType)
             self.init(origin:origin,
                 destination:destination,
                 properties:properties,

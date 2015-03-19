@@ -42,11 +42,17 @@ class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
     
     // MARK:Execution
     override func execute() {
+        var finished = false
+        CATransaction.begin()
+        CATransaction.setCompletionBlock(completionClosure)
+
         if let viewControllerToReturnTo = navigationSetup.navigationController.findDestination(navigationSetup:navigationSetup) {
             popTo(viewController:viewControllerToReturnTo)
         } else {
             pushNewViewController()
         }
+
+        CATransaction.commit()
     }
     
     private func pushNewViewController() {

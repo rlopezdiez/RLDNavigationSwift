@@ -9,16 +9,23 @@ class RLDNavigationCommand {
     class var destination:String? {
         return nil
     }
-
+    
     var navigationSetup:RLDNavigationSetup
-
+    
+    var completionClosure:(() -> Void)? = nil
+    
     // MARK:Initialisation
     
-    required init?(navigationSetup:RLDNavigationSetup) {
+    required init?(navigationSetup:RLDNavigationSetup, completionClosure:(() -> Void)?) {
         self.navigationSetup = navigationSetup
+        self.completionClosure = completionClosure
         if self.dynamicType.canHandle(navigationSetup:navigationSetup) == false {
             return nil
         }
+    }
+    
+    convenience init?(navigationSetup:RLDNavigationSetup) {
+        self.init(navigationSetup:navigationSetup, completionClosure:nil)
     }
     
     // MARK:Suitability checking
@@ -29,7 +36,9 @@ class RLDNavigationCommand {
     
     // MARK:Execution
     func execute() {
-        // Default implementation does nothing
+        if let completionClosure = completionClosure {
+            completionClosure()
+        }
     }
     
 }

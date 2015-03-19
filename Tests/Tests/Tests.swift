@@ -1,7 +1,7 @@
 import UIKit
 import XCTest
 
-class TestsTests: XCTestCase {
+class Tests: XCTestCase {
     
     let navigationController:RLDCountingNavigationController = RLDCountingNavigationController()
     
@@ -724,6 +724,96 @@ class TestsTests: XCTestCase {
         XCTAssertTrue(thirdViewControllerHasPropertySet)
         XCTAssertEqual(navigationController.pushCount, 1)
         XCTAssertEqual(navigationController.popCount, 1)
+    }
+    
+    // MARK: Completion blocks test cases
+    
+    func testDirectNavigationCompletionClosure() {
+        // GIVEN:
+        //   Two view controller classes (1, 2)
+        //   a navigation controller with an instance of the 1st class as the root view controller
+        //   a navigation command between the two classes (1 > 2)
+        UIViewController.registerSubclassWithName(viewControllerClassNames[0])
+        UIViewController.registerSubclassWithName(viewControllerClassNames[1])
+        
+        navigationController.setRootViewControllerWithClassName(viewControllerClassNames[0])
+        RLDNavigationCommandFromFirstToSecondViewController.registerCommandClass()
+        
+        // WHEN:
+        //   We create a set up asking to navigate to the 2nd view controller class
+        //   and we execute it with a completion block
+        //   and we wait until the execution finishes
+        var completionBlockExecuted = false
+        RLDNavigationSetup(
+            destination:viewControllerClassNames[1],
+            navigationController:navigationController).go(completionClosure:{
+                completionBlockExecuted = true
+            })
+        NSRunLoop.waitFor({ () -> Bool in
+            return completionBlockExecuted
+            }, withTimeout:0.2)
+        
+        // THEN:
+        //   The class chain must be 1 > 2
+        //   the navigation command has been executed
+        //   the completion block has been executed
+        //   the navigation controller has pushed once, without any pop
+        let expectedClassChain = [viewControllerClassNames[0], viewControllerClassNames[1]]
+        XCTAssertTrue(navigationController.hasClassChain(expectedClassChain))
+        XCTAssertTrue(RLDNavigationCommandFromFirstToSecondViewController.executed())
+        XCTAssertTrue(completionBlockExecuted)
+        XCTAssertEqual(navigationController.pushCount, 1)
+        XCTAssertEqual(navigationController.popCount, 0)
+    }
+    
+    func testBreadcrumbNavigationCompletionClosure() {
+        // GIVEN:
+        //   Three view controller classes (1, 2, 3)
+        //   a navigation controller with an instance of the first as the root view controller
+        //   two navigation commands (1 > 2), (2 > 3)
+        UIViewController.registerSubclassWithName(viewControllerClassNames[0])
+        UIViewController.registerSubclassWithName(viewControllerClassNames[1])
+        UIViewController.registerSubclassWithName(viewControllerClassNames[2])
+        
+        navigationController.setRootViewControllerWithClassName(viewControllerClassNames[0])
+        
+        RLDNavigationCommandFromFirstToSecondViewController.registerCommandClass()
+        RLDNavigationCommandFromSecondToThirdViewController.registerCommandClass()
+        
+        // WHEN:
+        //   We create a set up asking to navigate to the third view controller class
+        //   passing by the second view controller classes
+        //   and we execute it with a completion block
+        //   and we wait until the execution finishes
+        var completionBlockExecuted = false
+        RLDNavigationSetup(
+            destination:viewControllerClassNames[2],
+            breadcrumbs:[viewControllerClassNames[1]],
+            navigationController:navigationController).go(completionClosure:{
+                completionBlockExecuted = true
+            })
+        NSRunLoop.waitFor({ () -> Bool in
+            return completionBlockExecuted
+            }, withTimeout:0.2)
+        
+        // THEN:
+        //   The class chain will be 1 > 2 > 3
+        //   the navigation commands have been executed 1 > 2
+        //   the completion block has been executed
+        //   the navigation controller has pushed twice, without any pop
+        let expectedClassChain = [
+            viewControllerClassNames[0],
+            viewControllerClassNames[1],
+            viewControllerClassNames[2]]
+        let expectedxecutionOrder = [
+            "Tests.RLDNavigationCommandFromFirstToSecondViewController",
+            "Tests.RLDNavigationCommandFromSecondToThirdViewController"]
+        
+        XCTAssertTrue(navigationController.hasClassChain(expectedClassChain))
+        XCTAssertTrue(RLDTestNavigationCommand.hasExecutionOrder(expectedxecutionOrder))
+        XCTAssertTrue(completionBlockExecuted)
+        XCTAssertEqual(navigationController.pushCount, 2)
+        XCTAssertEqual(navigationController.popCount, 0)
     }
     
 }

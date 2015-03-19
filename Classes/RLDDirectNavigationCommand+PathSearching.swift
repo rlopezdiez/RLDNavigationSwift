@@ -10,10 +10,10 @@ extension RLDDirectNavigationCommand {
             return [directNavigationCommandClasses.first!]
         }
         
-        var linksBetweenNavigationCommands:[String: String] = [:]
+        var linksBetweenNavigationCommands:[String:String] = [:]
         var nextNavigationCommandClasses = originNavigationCommandClasses
 
-        var lastNavigationCommandClassInChain: String?
+        var lastNavigationCommandClassInChain:String?
         
         while count(nextNavigationCommandClasses) > 0 {
             let parentClass = nextNavigationCommandClasses.removeAtIndex(0)

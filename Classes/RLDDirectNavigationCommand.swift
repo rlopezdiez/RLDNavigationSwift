@@ -1,5 +1,4 @@
 import Foundation
-import QuartzCore
 
 class RLDDirectNavigationCommand:RLDNavigationCommand {
     
@@ -13,37 +12,31 @@ class RLDDirectNavigationCommand:RLDNavigationCommand {
             return
         }
         
+        var navigationCommands:[RLDNavigationCommand] = []
+        
         for navigationCommandClass in navigationCommandClassChain {
-
-            if let navigationCommandType = NSClassFromString(navigationCommandClass) as? RLDNavigationCommand.Type {
-                navigationSetup.destination = navigationCommandType.destination!
-                let navigationCommand = navigationCommandType(navigationSetup:navigationSetup)! as RLDNavigationCommand
-                executeSynchronously(animationClosure:{ () -> Void in
+            
+            let navigationCommandType = NSClassFromString(navigationCommandClass) as! RLDNavigationCommand.Type
+            navigationSetup.destination = navigationCommandType.destination!
+            
+            let navigationCommand = navigationCommandType(navigationSetup:navigationSetup, completionClosure:nil)!
+            
+            if let lastNavigationCommand = navigationCommands.last {
+                lastNavigationCommand.completionClosure = {
                     navigationCommand.execute()
-                })
-            } else {
-                break
+                }
             }
-
+            
+            navigationCommands.append(navigationCommand)
+            
             navigationSetup.origin = navigationSetup.destination
         }
         
-    }
-    
-    private func executeSynchronously(#animationClosure:() -> Void) {
-        var finished = false
-        CATransaction.begin()
-        CATransaction.setCompletionBlock { () -> Void in
-            finished = true
+        if let lastNavigationCommand = navigationCommands.last {
+            lastNavigationCommand.completionClosure = completionClosure
+            navigationCommands.first!.execute()
         }
         
-        animationClosure()
-        
-        CATransaction.commit()
-        
-        do {
-            NSRunLoop.currentRunLoop().runUntilDate(NSDate(timeIntervalSinceNow:0.01))
-        } while finished == false
     }
     
 }

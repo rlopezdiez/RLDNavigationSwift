@@ -67,6 +67,16 @@ RLDNavigationSetup(
     navigationController:navigationController!).go()
 ```
 
+If you need to be informed when you navigation has finished, you can use a completion closure when calling `go`, as in this example:
+```swift
+
+RLDNavigationSetup(
+    destination:"classNameOfDestination",
+    navigationController:navigationController!).go(completionClosure:{
+        // This will be executed once the navigation has taken place
+    })
+```
+
 #### Setting up the view controllers
 
 If you need to pass parameters or customize the view controllers when navigating to them, you can specify a dictionary of properties, and [KVC](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/KeyValueCoding/Articles/BasicPrinciples.html#//apple_ref/doc/uid/20002170-178791) will be used to try to set all properties for every newly instantiated view controller in the navigation chain. 
@@ -129,7 +139,7 @@ In the unlikely event that you want to use an URL-like navigation scheme, you ca
 To use the latest stable release of `RLDNavigationSwift`, just add the following to your project `Podfile`:
 
 ```
-pod 'RLDNavigationSwift', '~> 0.4.0' 
+pod 'RLDNavigationSwift', '~> 0.5.0' 
 ```
 
 If you like to live on the bleeding edge, you can use the `master` branch with:
