@@ -109,13 +109,12 @@ Breadcrumbs can help you creating complex routes, and are also a helpful way to 
 Instead of exposing your view controller classes, you should consider using view models, which is a cleaner, more flexible and strongly typed way to pass configuration parameters around. This will require a little more effort from your side if your application is not architected to work that way, but will probably pay off in the long term. You can find how to use view models with `RLDNavigationSwift` in the included sample app:
 ```swift
 // RLDMenuViewController
-- (IBAction)contactCardTapped {
-    RLDContactCardViewModel *viewModel = [RLDContactCardViewModel viewModelWithName:@"John"
-                                                                            surname:@"Doe"
-                                                                              email:@"john.doe@example.com"];
-    [[RLDNavigationSetup setupWithViewModel:viewModel
-                       navigationController:self.navigationController] go];
-}
+    @IBAction func contactCardTapped() {
+        let viewModel = RLDContactCardViewModel(name:"John", surname:"Doe", email:"john.doe@example.com")
+        RLDNavigationSetup(
+            viewModel:viewModel,
+            navigationController:navigationController!).go()
+    }
 ```
 
 #### URL navigation
