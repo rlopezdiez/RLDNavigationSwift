@@ -4,30 +4,22 @@ import Foundation
 class RLDMenuViewController:UIViewController {
     
     @IBAction func peopleNearbyTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDFolderViewController",
-            navigationController:navigationController!).go()
+        self.goTo("NavigationPrototype.RLDFolderViewController")
     }
     
     @IBAction func connectionsTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDConnectionsViewController",
-            navigationController:navigationController!).go()
+        self.goTo("NavigationPrototype.RLDConnectionsViewController")
     }
     
     @IBAction func chatTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDChatViewController",
-            properties:["userId":"1"],
-            navigationController:navigationController!).go()
+        self.goTo("NavigationPrototype.RLDChatViewController",
+            properties:["userId":"1"])
     }
     
     @IBAction func chatFromProfileTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDChatViewController",
+        self.goTo("NavigationPrototype.RLDChatViewController",
             properties:["userId":"1"],
-            breadcrumbs:["NavigationPrototype.RLDProfileViewController"],
-            navigationController:navigationController!).go()
+            breadcrumbs:["NavigationPrototype.RLDProfileViewController"])
     }
     
     @IBAction func profileTapped() {

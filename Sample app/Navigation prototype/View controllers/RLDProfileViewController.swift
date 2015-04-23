@@ -1,7 +1,7 @@
 import UIKit
 
 class RLDProfileViewController:UIViewController {
-
+    
     @IBOutlet weak var titleLabel:UILabel!
     
     var userId:String? {
@@ -13,37 +13,27 @@ class RLDProfileViewController:UIViewController {
     }
     
     @IBAction func chatWithUserTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDChatViewController",
-            properties:["userId":userId!],
-            navigationController:navigationController!).go()
+        self.goTo("NavigationPrototype.RLDChatViewController",
+            properties:["userId":userId!])
     }
     
     @IBAction func jumpToConnectionsTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDConnectionsViewController",
-            navigationController:navigationController!).go()
+        self.goTo("NavigationPrototype.RLDConnectionsViewController")
     }
     
     @IBAction func jumpToMenuTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDMenuViewController",
-            navigationController:navigationController!).go()
+        self.goTo("NavigationPrototype.RLDMenuViewController")
     }
     
     @IBAction func jumpToProfileForSecondUserTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDProfileViewController",
-            properties:["userId":"2"],
-            navigationController:navigationController!).go()
+        self.goTo("NavigationPrototype.RLDProfileViewController",
+            properties:["userId":"2"])
     }
     
     @IBAction func jumpToChatWithSecondUserTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDChatViewController",
+        self.goTo("NavigationPrototype.RLDChatViewController",
             properties:["userId":"2"],
-            breadcrumbs:["NavigationPrototype.RLDProfileViewController"],
-            navigationController:navigationController!).go()
+            breadcrumbs:["NavigationPrototype.RLDProfileViewController"])
     }
     
 }

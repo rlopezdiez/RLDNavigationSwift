@@ -13,25 +13,19 @@ class RLDChatViewController:UIViewController {
     }
     
     @IBAction func jumpToProfileTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDProfileViewController",
-            properties:["userId":userId!],
-            navigationController:navigationController!).go()
+        self.goTo("NavigationPrototype.RLDProfileViewController",
+            properties:["userId":userId!])
     }
 
     @IBAction func jumpToProfileForSecondUserTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDProfileViewController",
+        self.goTo("NavigationPrototype.RLDProfileViewController",
             properties:["userId":"2"],
-            breadcrumbs:["NavigationPrototype.RLDChatViewController"],
-            navigationController:navigationController!).go()
+            breadcrumbs:["NavigationPrototype.RLDChatViewController"])
     }
 
     @IBAction func jumpToChatWithSecondUserTapped() {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDChatViewController",
+        self.goTo("NavigationPrototype.RLDChatViewController",
             properties:["userId":"2"],
-            breadcrumbs:["NavigationPrototype.RLDConnectionsViewController"],
-            navigationController:navigationController!).go()
+            breadcrumbs:["NavigationPrototype.RLDConnectionsViewController"])
     }
 }

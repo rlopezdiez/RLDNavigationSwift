@@ -14,7 +14,7 @@ class RLDNavigationCommand {
     
     var completionClosure:(() -> Void)? = nil
     
-    // MARK:Initialisation
+    // MARK:Initialization
     
     required init?(navigationSetup:RLDNavigationSetup, completionClosure:(() -> Void)?) {
         self.navigationSetup = navigationSetup
@@ -35,6 +35,7 @@ class RLDNavigationCommand {
     }
     
     // MARK:Execution
+    
     func execute() {
         if let completionClosure = completionClosure {
             completionClosure()

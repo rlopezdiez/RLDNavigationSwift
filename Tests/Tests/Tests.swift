@@ -26,11 +26,10 @@ class Tests: XCTestCase {
     }
     
     func synchronousGoTo(#destination:String, properties:[String:AnyObject]?, breadcrumbs:[String]?) {
-        RLDNavigationSetup(
-            destination:destination,
+        navigationController.topViewController.goTo(destination,
             properties:properties,
             breadcrumbs:breadcrumbs,
-            navigationController:navigationController).go()
+            completionClosure:nil)
         NSRunLoop.waitFor({ () -> Bool in
             return self.navigationController.topViewControllerClassName() == destination
             }, withTimeout:0.2)
@@ -743,14 +742,13 @@ class Tests: XCTestCase {
         //   We create a set up asking to navigate to the 2nd view controller class
         //   and we execute it with a completion block
         //   and we wait until the execution finishes
-        var completionBlockExecuted = false
-        RLDNavigationSetup(
-            destination:viewControllerClassNames[1],
-            navigationController:navigationController).go(completionClosure:{
-                completionBlockExecuted = true
-            })
+        var completionClosureExecuted = false
+        navigationController.topViewController.goTo(viewControllerClassNames[1],
+            completionClosure:{
+                completionClosureExecuted = true
+        })
         NSRunLoop.waitFor({ () -> Bool in
-            return completionBlockExecuted
+            return completionClosureExecuted
             }, withTimeout:0.2)
         
         // THEN:
@@ -761,7 +759,7 @@ class Tests: XCTestCase {
         let expectedClassChain = [viewControllerClassNames[0], viewControllerClassNames[1]]
         XCTAssertTrue(navigationController.hasClassChain(expectedClassChain))
         XCTAssertTrue(RLDNavigationCommandFromFirstToSecondViewController.executed())
-        XCTAssertTrue(completionBlockExecuted)
+        XCTAssertTrue(completionClosureExecuted)
         XCTAssertEqual(navigationController.pushCount, 1)
         XCTAssertEqual(navigationController.popCount, 0)
     }
@@ -785,15 +783,14 @@ class Tests: XCTestCase {
         //   passing by the second view controller classes
         //   and we execute it with a completion block
         //   and we wait until the execution finishes
-        var completionBlockExecuted = false
-        RLDNavigationSetup(
-            destination:viewControllerClassNames[2],
+        var completionClosureExecuted = false
+        navigationController.topViewController.goTo(viewControllerClassNames[2],
             breadcrumbs:[viewControllerClassNames[1]],
-            navigationController:navigationController).go(completionClosure:{
-                completionBlockExecuted = true
-            })
+            completionClosure:{
+                completionClosureExecuted = true
+        })
         NSRunLoop.waitFor({ () -> Bool in
-            return completionBlockExecuted
+            return completionClosureExecuted
             }, withTimeout:0.2)
         
         // THEN:
@@ -811,7 +808,7 @@ class Tests: XCTestCase {
         
         XCTAssertTrue(navigationController.hasClassChain(expectedClassChain))
         XCTAssertTrue(RLDTestNavigationCommand.hasExecutionOrder(expectedxecutionOrder))
-        XCTAssertTrue(completionBlockExecuted)
+        XCTAssertTrue(completionClosureExecuted)
         XCTAssertEqual(navigationController.pushCount, 2)
         XCTAssertEqual(navigationController.popCount, 0)
     }

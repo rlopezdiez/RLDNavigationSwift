@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		459B4B4B1AE93FA30036D702 /* UIView+RLDNavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B4B491AE93FA30036D702 /* UIView+RLDNavigationHelper.swift */; };
+		459B4B4C1AE93FA30036D702 /* UIViewController+RLDNavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B4B4A1AE93FA30036D702 /* UIViewController+RLDNavigationHelper.swift */; };
 		459E1B881AAE606300EC3C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B6E1AAE606300EC3C51 /* AppDelegate.swift */; };
 		459E1B891AAE606300EC3C51 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459E1B6F1AAE606300EC3C51 /* LaunchScreen.xib */; };
 		459E1B8A1AAE606300EC3C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459E1B711AAE606300EC3C51 /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		45537D651AAA7A3D0043F2D8 /* NavigationPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		459B4B491AE93FA30036D702 /* UIView+RLDNavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RLDNavigationHelper.swift"; sourceTree = "<group>"; };
+		459B4B4A1AE93FA30036D702 /* UIViewController+RLDNavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RLDNavigationHelper.swift"; sourceTree = "<group>"; };
 		459E1B6E1AAE606300EC3C51 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		459E1B701AAE606300EC3C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		459E1B721AAE606300EC3C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				459E1BA01AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift */,
 				459E1BA11AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift */,
 				459E1BA71AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift */,
+				459B4B491AE93FA30036D702 /* UIView+RLDNavigationHelper.swift */,
+				459B4B4A1AE93FA30036D702 /* UIViewController+RLDNavigationHelper.swift */,
 			);
 			name = RLDNavigationSwift;
 			path = ../Classes;
@@ -251,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				459E1B881AAE606300EC3C51 /* AppDelegate.swift in Sources */,
+				459B4B4C1AE93FA30036D702 /* UIViewController+RLDNavigationHelper.swift in Sources */,
 				459E1BA91AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift in Sources */,
 				459E1BB21AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift in Sources */,
 				459E1B931AAE606300EC3C51 /* RLDProfileNavigationCommand.swift in Sources */,
@@ -268,6 +275,7 @@
 				459E1B971AAE606300EC3C51 /* RLDConnectionsViewController.swift in Sources */,
 				459E1B981AAE606300EC3C51 /* RLDContactCardViewController.swift in Sources */,
 				459E1B8D1AAE606300EC3C51 /* RLDChatNavigationCommand.swift in Sources */,
+				459B4B4B1AE93FA30036D702 /* UIView+RLDNavigationHelper.swift in Sources */,
 				459E1B921AAE606300EC3C51 /* RLDNavigationCommandRegistrar.swift in Sources */,
 				459E1BAC1AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift in Sources */,
 				459E1B8E1AAE606300EC3C51 /* RLDConnectionsNavigationCommand.swift in Sources */,

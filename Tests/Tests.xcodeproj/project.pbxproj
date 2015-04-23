@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		459B4B461AE90EAB0036D702 /* UIViewController+RLDNavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B4B451AE90EAB0036D702 /* UIViewController+RLDNavigationHelper.swift */; };
+		459B4B481AE918250036D702 /* UIView+RLDNavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B4B471AE918250036D702 /* UIView+RLDNavigationHelper.swift */; };
 		45A60ED71AB8700A00488EA9 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A60ED51AB8700A00488EA9 /* Tests.swift */; };
 		45A60EDB1AB8706300488EA9 /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A60EDA1AB8706300488EA9 /* TestHelpers.m */; };
 		45A60EE71AB8709900488EA9 /* RLDBreadcrumbNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A60EDD1AB8709900488EA9 /* RLDBreadcrumbNavigationCommand.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		45643EE21AB86EFC00FE7F17 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		459B4B451AE90EAB0036D702 /* UIViewController+RLDNavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RLDNavigationHelper.swift"; sourceTree = "<group>"; };
+		459B4B471AE918250036D702 /* UIView+RLDNavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RLDNavigationHelper.swift"; sourceTree = "<group>"; };
 		45A60ED41AB8700A00488EA9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45A60ED51AB8700A00488EA9 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		45A60ED91AB8706300488EA9 /* TestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelpers.h; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				45A60EDD1AB8709900488EA9 /* RLDBreadcrumbNavigationCommand.swift */,
 				45A60EE51AB8709900488EA9 /* RLDPushPopNavigationCommand.swift */,
 				45A60EE61AB8709900488EA9 /* UINavigationController+RLDNavigationSetup.swift */,
+				459B4B451AE90EAB0036D702 /* UIViewController+RLDNavigationHelper.swift */,
+				459B4B471AE918250036D702 /* UIView+RLDNavigationHelper.swift */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -174,8 +180,10 @@
 				45A60EF01AB8709900488EA9 /* UINavigationController+RLDNavigationSetup.swift in Sources */,
 				45A60EE91AB8709900488EA9 /* RLDDirectNavigationCommand.swift in Sources */,
 				45A60EE81AB8709900488EA9 /* RLDDirectNavigationCommand+PathSearching.swift in Sources */,
+				459B4B481AE918250036D702 /* UIView+RLDNavigationHelper.swift in Sources */,
 				45A60EEE1AB8709900488EA9 /* RLDNavigationSetup.swift in Sources */,
 				45A60EFA1AB8EC6700488EA9 /* TestNavigationCommands.swift in Sources */,
+				459B4B461AE90EAB0036D702 /* UIViewController+RLDNavigationHelper.swift in Sources */,
 				45A60EEA1AB8709900488EA9 /* RLDNavigationCommand+NavigationCommandRegister.swift in Sources */,
 				45A60EE71AB8709900488EA9 /* RLDBreadcrumbNavigationCommand.swift in Sources */,
 				45A60EDB1AB8706300488EA9 /* TestHelpers.m in Sources */,
@@ -225,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -265,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";

@@ -6,7 +6,6 @@ If you want to adhere to the single responsibility principle of object-oriented 
 
 It implements routing using breadth-first search to resolve complex paths. It also prevents navigation cycles like `A > B > C > B`. A sample app is included.
 
-> Requires XCode Version 6.3 (6D543q) or newer.
 > [Objective-C version](https://github.com/rlopezdiez/RLDNavigation) also available.
 
 ## How to use
@@ -62,17 +61,14 @@ class RLDNavigationCommandRegistrar {
 Once you have registered all the navigation commands that you need, you will be able to easily navigate from one view controller to another:
 
 ```swift
-RLDNavigationSetup(
-    destination:"classNameOfDestination",
-    navigationController:navigationController!).go()
+self.goTo("classNameOfDestination")
 ```
 
 If you need to be informed when you navigation has finished, you can use a completion closure when calling `go`, as in this example:
 ```swift
 
-RLDNavigationSetup(
-    destination:"classNameOfDestination",
-    navigationController:navigationController!).go(completionClosure:{
+self.goTo("classNameOfDestination",
+    completionClosure:{
         // This will be executed once the navigation has taken place
     })
 ```
@@ -84,10 +80,8 @@ If you need to pass parameters or customize the view controllers when navigating
 For instance, if three view controllers are pushed when navigating in this example, all of them will get its `userName` property set to `John Doe`. In case any of the view controllers doesn't have this property, or it's readonly, it will be ignored:
 
 ```swift
-RLDNavigationSetup(
-    destination:"classNameOfDestination",
-    properties:["userName":"John Doe"],
-    navigationController:navigationController!).go()
+self.goTo("classNameOfDestination",
+    properties:["userName":"John Doe"])
 ```
 
 #### Breadcrumbs
@@ -95,11 +89,9 @@ RLDNavigationSetup(
 You can override the fully automatic flow calculation by specifying intermediate destinations that must be reached before aiming to the final target. Automated paths will be followed between these milestones when necessary.
 
 ```swift
-RLDNavigationSetup(
-    destination:"classNameOfDestination",
+self.goTo("classNameOfDestination",
     properties:["userName":"John Doe"],
-    breadcrumbs:["firstIntermediateClassName", "secondIntermediateClassName"],
-    navigationController:navigationController!).go()
+    breadcrumbs:["firstIntermediateClassName", "secondIntermediateClassName"])
 ```
 
 Breadcrumbs can help you creating complex routes, and are also a helpful way to replace URL-like navigation definitions.
@@ -138,7 +130,7 @@ In the unlikely event that you want to use an URL-like navigation scheme, you ca
 To use the latest stable release of `RLDNavigationSwift`, just add the following to your project `Podfile`:
 
 ```
-pod 'RLDNavigationSwift', '~> 0.5.0' 
+pod 'RLDNavigationSwift', '~> 0.6.0' 
 ```
 
 If you like to live on the bleeding edge, you can use the `master` branch with:

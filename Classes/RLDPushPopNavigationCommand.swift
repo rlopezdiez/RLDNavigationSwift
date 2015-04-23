@@ -41,6 +41,7 @@ class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
     }
     
     // MARK:Execution
+    
     override func execute() {
         var finished = false
         CATransaction.begin()
@@ -79,6 +80,7 @@ class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
     }
     
     // MARK: Destination view controller configuration
+    
     private func configure(#viewController:UIViewController) {
         viewController.loadView()
         viewController.set(properties:navigationSetup.properties)

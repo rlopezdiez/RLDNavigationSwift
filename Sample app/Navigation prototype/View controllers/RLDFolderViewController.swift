@@ -11,10 +11,8 @@ class RLDFolderViewController:UIViewController {
     }
     
     private func navigateToProfile(#userId:String) {
-        RLDNavigationSetup(
-            destination:"NavigationPrototype.RLDProfileViewController",
-            properties:["userId":userId],
-            navigationController:navigationController!).go()
+        self.goTo("NavigationPrototype.RLDProfileViewController",
+            properties:["userId":userId])
     }
     
 }
