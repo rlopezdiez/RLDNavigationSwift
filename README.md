@@ -64,7 +64,7 @@ Once you have registered all the navigation commands that you need, you will be 
 self.goTo("classNameOfDestination")
 ```
 
-If you need to be informed when you navigation has finished, you can use a completion closure when calling `go`, as in this example:
+If you need to be informed when you navigation has finished, you can use a completion closure, as in this example:
 ```swift
 
 self.goTo("classNameOfDestination",
