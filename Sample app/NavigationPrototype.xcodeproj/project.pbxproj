@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		459B4B4B1AE93FA30036D702 /* UIView+RLDNavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B4B491AE93FA30036D702 /* UIView+RLDNavigationHelper.swift */; };
-		459B4B4C1AE93FA30036D702 /* UIViewController+RLDNavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B4B4A1AE93FA30036D702 /* UIViewController+RLDNavigationHelper.swift */; };
 		459E1B881AAE606300EC3C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B6E1AAE606300EC3C51 /* AppDelegate.swift */; };
 		459E1B891AAE606300EC3C51 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459E1B6F1AAE606300EC3C51 /* LaunchScreen.xib */; };
 		459E1B8A1AAE606300EC3C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459E1B711AAE606300EC3C51 /* Main.storyboard */; };
@@ -29,22 +27,48 @@
 		459E1B9A1AAE606300EC3C51 /* RLDFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B851AAE606300EC3C51 /* RLDFolderViewController.swift */; };
 		459E1B9B1AAE606300EC3C51 /* RLDMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B861AAE606300EC3C51 /* RLDMenuViewController.swift */; };
 		459E1B9C1AAE606300EC3C51 /* RLDProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B871AAE606300EC3C51 /* RLDProfileViewController.swift */; };
-		459E1BA91AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1B9F1AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift */; };
-		459E1BAA1AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA01AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift */; };
-		459E1BAB1AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA11AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift */; };
-		459E1BAC1AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA21AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift */; };
-		459E1BAD1AAE60AC00EC3C51 /* RLDNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA31AAE60AC00EC3C51 /* RLDNavigationCommand.swift */; };
-		459E1BAE1AAE60AC00EC3C51 /* RLDNavigationCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA41AAE60AC00EC3C51 /* RLDNavigationCommandFactory.swift */; };
-		459E1BAF1AAE60AC00EC3C51 /* RLDNavigationSetup+RLDNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA51AAE60AC00EC3C51 /* RLDNavigationSetup+RLDNavigationCommand.swift */; };
-		459E1BB01AAE60AC00EC3C51 /* RLDNavigationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA61AAE60AC00EC3C51 /* RLDNavigationSetup.swift */; };
-		459E1BB11AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA71AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift */; };
-		459E1BB21AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E1BA81AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift */; };
+		45F2AF8A1AEFEDB100E07CF7 /* RLDNavigationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F2AF731AEFEDB000E07CF7 /* RLDNavigationSwift.framework */; };
+		45F2AF8B1AEFEDB100E07CF7 /* RLDNavigationSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45F2AF731AEFEDB000E07CF7 /* RLDNavigationSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45F2AF9E1AEFEDE100E07CF7 /* RLDBreadcrumbNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF921AEFEDE100E07CF7 /* RLDBreadcrumbNavigationCommand.swift */; };
+		45F2AF9F1AEFEDE100E07CF7 /* RLDDirectNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF931AEFEDE100E07CF7 /* RLDDirectNavigationCommand.swift */; };
+		45F2AFA01AEFEDE100E07CF7 /* RLDDirectNavigationCommand+PathSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF941AEFEDE100E07CF7 /* RLDDirectNavigationCommand+PathSearching.swift */; };
+		45F2AFA11AEFEDE100E07CF7 /* RLDNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF951AEFEDE100E07CF7 /* RLDNavigationCommand.swift */; };
+		45F2AFA21AEFEDE100E07CF7 /* RLDNavigationCommand+NavigationCommandRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF961AEFEDE100E07CF7 /* RLDNavigationCommand+NavigationCommandRegister.swift */; };
+		45F2AFA31AEFEDE100E07CF7 /* RLDNavigationCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF971AEFEDE100E07CF7 /* RLDNavigationCommandFactory.swift */; };
+		45F2AFA41AEFEDE100E07CF7 /* RLDNavigationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF981AEFEDE100E07CF7 /* RLDNavigationSetup.swift */; };
+		45F2AFA51AEFEDE100E07CF7 /* RLDNavigationSetup+RLDNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF991AEFEDE100E07CF7 /* RLDNavigationSetup+RLDNavigationCommand.swift */; };
+		45F2AFA61AEFEDE100E07CF7 /* RLDPushPopNavigationCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF9A1AEFEDE100E07CF7 /* RLDPushPopNavigationCommand.swift */; };
+		45F2AFA71AEFEDE100E07CF7 /* UINavigationController+RLDNavigationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF9B1AEFEDE100E07CF7 /* UINavigationController+RLDNavigationSetup.swift */; };
+		45F2AFA81AEFEDE100E07CF7 /* UIView+RLDNavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF9C1AEFEDE100E07CF7 /* UIView+RLDNavigationHelper.swift */; };
+		45F2AFA91AEFEDE100E07CF7 /* UIViewController+RLDNavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AF9D1AEFEDE100E07CF7 /* UIViewController+RLDNavigationHelper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45F2AF881AEFEDB100E07CF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45537D5D1AAA7A3D0043F2D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45F2AF721AEFEDB000E07CF7;
+			remoteInfo = RLDNavigationSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45F2AF6C1AEFED4600E07CF7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				45F2AF8B1AEFEDB100E07CF7 /* RLDNavigationSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		45537D651AAA7A3D0043F2D8 /* NavigationPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		459B4B491AE93FA30036D702 /* UIView+RLDNavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RLDNavigationHelper.swift"; sourceTree = "<group>"; };
-		459B4B4A1AE93FA30036D702 /* UIViewController+RLDNavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RLDNavigationHelper.swift"; sourceTree = "<group>"; };
 		459E1B6E1AAE606300EC3C51 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		459E1B701AAE606300EC3C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		459E1B721AAE606300EC3C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,20 +90,32 @@
 		459E1B851AAE606300EC3C51 /* RLDFolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDFolderViewController.swift; sourceTree = "<group>"; };
 		459E1B861AAE606300EC3C51 /* RLDMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDMenuViewController.swift; sourceTree = "<group>"; };
 		459E1B871AAE606300EC3C51 /* RLDProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDProfileViewController.swift; sourceTree = "<group>"; };
-		459E1B9F1AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDBreadcrumbNavigationCommand.swift; sourceTree = "<group>"; };
-		459E1BA01AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLDDirectNavigationCommand+PathSearching.swift"; sourceTree = "<group>"; };
-		459E1BA11AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDDirectNavigationCommand.swift; sourceTree = "<group>"; };
-		459E1BA21AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLDNavigationCommand+NavigationCommandRegister.swift"; sourceTree = "<group>"; };
-		459E1BA31AAE60AC00EC3C51 /* RLDNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDNavigationCommand.swift; sourceTree = "<group>"; };
-		459E1BA41AAE60AC00EC3C51 /* RLDNavigationCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDNavigationCommandFactory.swift; sourceTree = "<group>"; };
-		459E1BA51AAE60AC00EC3C51 /* RLDNavigationSetup+RLDNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLDNavigationSetup+RLDNavigationCommand.swift"; sourceTree = "<group>"; };
-		459E1BA61AAE60AC00EC3C51 /* RLDNavigationSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDNavigationSetup.swift; sourceTree = "<group>"; };
-		459E1BA71AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLDPushPopNavigationCommand.swift; sourceTree = "<group>"; };
-		459E1BA81AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+RLDNavigationSetup.swift"; sourceTree = "<group>"; };
+		45F2AF731AEFEDB000E07CF7 /* RLDNavigationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RLDNavigationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45F2AF761AEFEDB100E07CF7 /* RLDNavigationSwift-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RLDNavigationSwift-Info.plist"; path = "../Navigation prototype/RLDNavigationSwift-Info.plist"; sourceTree = "<group>"; };
+		45F2AF921AEFEDE100E07CF7 /* RLDBreadcrumbNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLDBreadcrumbNavigationCommand.swift; path = ../../Classes/RLDBreadcrumbNavigationCommand.swift; sourceTree = "<group>"; };
+		45F2AF931AEFEDE100E07CF7 /* RLDDirectNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLDDirectNavigationCommand.swift; path = ../../Classes/RLDDirectNavigationCommand.swift; sourceTree = "<group>"; };
+		45F2AF941AEFEDE100E07CF7 /* RLDDirectNavigationCommand+PathSearching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RLDDirectNavigationCommand+PathSearching.swift"; path = "../../Classes/RLDDirectNavigationCommand+PathSearching.swift"; sourceTree = "<group>"; };
+		45F2AF951AEFEDE100E07CF7 /* RLDNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLDNavigationCommand.swift; path = ../../Classes/RLDNavigationCommand.swift; sourceTree = "<group>"; };
+		45F2AF961AEFEDE100E07CF7 /* RLDNavigationCommand+NavigationCommandRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RLDNavigationCommand+NavigationCommandRegister.swift"; path = "../../Classes/RLDNavigationCommand+NavigationCommandRegister.swift"; sourceTree = "<group>"; };
+		45F2AF971AEFEDE100E07CF7 /* RLDNavigationCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLDNavigationCommandFactory.swift; path = ../../Classes/RLDNavigationCommandFactory.swift; sourceTree = "<group>"; };
+		45F2AF981AEFEDE100E07CF7 /* RLDNavigationSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLDNavigationSetup.swift; path = ../../Classes/RLDNavigationSetup.swift; sourceTree = "<group>"; };
+		45F2AF991AEFEDE100E07CF7 /* RLDNavigationSetup+RLDNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RLDNavigationSetup+RLDNavigationCommand.swift"; path = "../../Classes/RLDNavigationSetup+RLDNavigationCommand.swift"; sourceTree = "<group>"; };
+		45F2AF9A1AEFEDE100E07CF7 /* RLDPushPopNavigationCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLDPushPopNavigationCommand.swift; path = ../../Classes/RLDPushPopNavigationCommand.swift; sourceTree = "<group>"; };
+		45F2AF9B1AEFEDE100E07CF7 /* UINavigationController+RLDNavigationSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+RLDNavigationSetup.swift"; path = "../../Classes/UINavigationController+RLDNavigationSetup.swift"; sourceTree = "<group>"; };
+		45F2AF9C1AEFEDE100E07CF7 /* UIView+RLDNavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+RLDNavigationHelper.swift"; path = "../../Classes/UIView+RLDNavigationHelper.swift"; sourceTree = "<group>"; };
+		45F2AF9D1AEFEDE100E07CF7 /* UIViewController+RLDNavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+RLDNavigationHelper.swift"; path = "../../Classes/UIViewController+RLDNavigationHelper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		45537D621AAA7A3D0043F2D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F2AF8A1AEFEDB100E07CF7 /* RLDNavigationSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45F2AF6F1AEFEDB000E07CF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,8 +128,8 @@
 		45537D5C1AAA7A3D0043F2D8 = {
 			isa = PBXGroup;
 			children = (
-				459E1B9E1AAE60AC00EC3C51 /* RLDNavigationSwift */,
 				459E1B6D1AAE606300EC3C51 /* Navigation prototype */,
+				45F2AF741AEFEDB100E07CF7 /* RLDNavigationSwift */,
 				45537D661AAA7A3D0043F2D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				45537D651AAA7A3D0043F2D8 /* NavigationPrototype.app */,
+				45F2AF731AEFEDB000E07CF7 /* RLDNavigationSwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,27 +203,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		459E1B9E1AAE60AC00EC3C51 /* RLDNavigationSwift */ = {
+		45F2AF741AEFEDB100E07CF7 /* RLDNavigationSwift */ = {
 			isa = PBXGroup;
 			children = (
-				459E1BA61AAE60AC00EC3C51 /* RLDNavigationSetup.swift */,
-				459E1BA51AAE60AC00EC3C51 /* RLDNavigationSetup+RLDNavigationCommand.swift */,
-				459E1BA81AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift */,
-				459E1BA41AAE60AC00EC3C51 /* RLDNavigationCommandFactory.swift */,
-				459E1BA31AAE60AC00EC3C51 /* RLDNavigationCommand.swift */,
-				459E1BA21AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift */,
-				459E1B9F1AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift */,
-				459E1BA01AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift */,
-				459E1BA11AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift */,
-				459E1BA71AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift */,
-				459B4B491AE93FA30036D702 /* UIView+RLDNavigationHelper.swift */,
-				459B4B4A1AE93FA30036D702 /* UIViewController+RLDNavigationHelper.swift */,
+				45F2AF9C1AEFEDE100E07CF7 /* UIView+RLDNavigationHelper.swift */,
+				45F2AF9D1AEFEDE100E07CF7 /* UIViewController+RLDNavigationHelper.swift */,
+				45F2AF981AEFEDE100E07CF7 /* RLDNavigationSetup.swift */,
+				45F2AF991AEFEDE100E07CF7 /* RLDNavigationSetup+RLDNavigationCommand.swift */,
+				45F2AF951AEFEDE100E07CF7 /* RLDNavigationCommand.swift */,
+				45F2AF931AEFEDE100E07CF7 /* RLDDirectNavigationCommand.swift */,
+				45F2AF9A1AEFEDE100E07CF7 /* RLDPushPopNavigationCommand.swift */,
+				45F2AF961AEFEDE100E07CF7 /* RLDNavigationCommand+NavigationCommandRegister.swift */,
+				45F2AF921AEFEDE100E07CF7 /* RLDBreadcrumbNavigationCommand.swift */,
+				45F2AF941AEFEDE100E07CF7 /* RLDDirectNavigationCommand+PathSearching.swift */,
+				45F2AF971AEFEDE100E07CF7 /* RLDNavigationCommandFactory.swift */,
+				45F2AF9B1AEFEDE100E07CF7 /* UINavigationController+RLDNavigationSetup.swift */,
+				45F2AF751AEFEDB100E07CF7 /* Supporting Files */,
 			);
-			name = RLDNavigationSwift;
-			path = ../Classes;
+			path = RLDNavigationSwift;
+			sourceTree = "<group>";
+		};
+		45F2AF751AEFEDB100E07CF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45F2AF761AEFEDB100E07CF7 /* RLDNavigationSwift-Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		45F2AF701AEFEDB000E07CF7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		45537D641AAA7A3D0043F2D8 /* NavigationPrototype */ = {
@@ -196,15 +251,35 @@
 				45537D611AAA7A3D0043F2D8 /* Sources */,
 				45537D621AAA7A3D0043F2D8 /* Frameworks */,
 				45537D631AAA7A3D0043F2D8 /* Resources */,
+				45F2AF6C1AEFED4600E07CF7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				45F2AF891AEFEDB100E07CF7 /* PBXTargetDependency */,
 			);
 			name = NavigationPrototype;
 			productName = "Navigation prototype";
 			productReference = 45537D651AAA7A3D0043F2D8 /* NavigationPrototype.app */;
 			productType = "com.apple.product-type.application";
+		};
+		45F2AF721AEFEDB000E07CF7 /* RLDNavigationSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45F2AF8C1AEFEDB100E07CF7 /* Build configuration list for PBXNativeTarget "RLDNavigationSwift" */;
+			buildPhases = (
+				45F2AF6E1AEFEDB000E07CF7 /* Sources */,
+				45F2AF6F1AEFEDB000E07CF7 /* Frameworks */,
+				45F2AF701AEFEDB000E07CF7 /* Headers */,
+				45F2AF711AEFEDB000E07CF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RLDNavigationSwift;
+			productName = RLDNavigationSwift;
+			productReference = 45F2AF731AEFEDB000E07CF7 /* RLDNavigationSwift.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -217,6 +292,9 @@
 				TargetAttributes = {
 					45537D641AAA7A3D0043F2D8 = {
 						CreatedOnToolsVersion = 6.1;
+					};
+					45F2AF721AEFEDB000E07CF7 = {
+						CreatedOnToolsVersion = 6.3;
 					};
 				};
 			};
@@ -234,6 +312,7 @@
 			projectRoot = "";
 			targets = (
 				45537D641AAA7A3D0043F2D8 /* NavigationPrototype */,
+				45F2AF721AEFEDB000E07CF7 /* RLDNavigationSwift */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +328,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45F2AF711AEFEDB000E07CF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,38 +343,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				459E1B881AAE606300EC3C51 /* AppDelegate.swift in Sources */,
-				459B4B4C1AE93FA30036D702 /* UIViewController+RLDNavigationHelper.swift in Sources */,
-				459E1BA91AAE60AC00EC3C51 /* RLDBreadcrumbNavigationCommand.swift in Sources */,
-				459E1BB21AAE60AC00EC3C51 /* UINavigationController+RLDNavigationSetup.swift in Sources */,
 				459E1B931AAE606300EC3C51 /* RLDProfileNavigationCommand.swift in Sources */,
 				459E1B901AAE606300EC3C51 /* RLDFolderNavigationCommand.swift in Sources */,
 				459E1B9B1AAE606300EC3C51 /* RLDMenuViewController.swift in Sources */,
 				459E1B941AAE606300EC3C51 /* RLDNavigationSetup+RLDContactCardViewModel.swift in Sources */,
-				459E1BAD1AAE60AC00EC3C51 /* RLDNavigationCommand.swift in Sources */,
-				459E1BAF1AAE60AC00EC3C51 /* RLDNavigationSetup+RLDNavigationCommand.swift in Sources */,
-				459E1BAB1AAE60AC00EC3C51 /* RLDDirectNavigationCommand.swift in Sources */,
 				459E1B8F1AAE606300EC3C51 /* RLDContactCardViewModelNavigationCommand.swift in Sources */,
 				459E1B951AAE606300EC3C51 /* RLDNavigationSetup+URLs.swift in Sources */,
 				459E1B9A1AAE606300EC3C51 /* RLDFolderViewController.swift in Sources */,
 				459E1B961AAE606300EC3C51 /* RLDChatViewController.swift in Sources */,
-				459E1BAE1AAE60AC00EC3C51 /* RLDNavigationCommandFactory.swift in Sources */,
 				459E1B971AAE606300EC3C51 /* RLDConnectionsViewController.swift in Sources */,
 				459E1B981AAE606300EC3C51 /* RLDContactCardViewController.swift in Sources */,
 				459E1B8D1AAE606300EC3C51 /* RLDChatNavigationCommand.swift in Sources */,
-				459B4B4B1AE93FA30036D702 /* UIView+RLDNavigationHelper.swift in Sources */,
 				459E1B921AAE606300EC3C51 /* RLDNavigationCommandRegistrar.swift in Sources */,
-				459E1BAC1AAE60AC00EC3C51 /* RLDNavigationCommand+NavigationCommandRegister.swift in Sources */,
 				459E1B8E1AAE606300EC3C51 /* RLDConnectionsNavigationCommand.swift in Sources */,
 				459E1B991AAE606300EC3C51 /* RLDContactCardViewModel.swift in Sources */,
 				459E1B9C1AAE606300EC3C51 /* RLDProfileViewController.swift in Sources */,
-				459E1BAA1AAE60AC00EC3C51 /* RLDDirectNavigationCommand+PathSearching.swift in Sources */,
 				459E1B911AAE606300EC3C51 /* RLDMenuNavigationCommand.swift in Sources */,
-				459E1BB11AAE60AC00EC3C51 /* RLDPushPopNavigationCommand.swift in Sources */,
-				459E1BB01AAE60AC00EC3C51 /* RLDNavigationSetup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45F2AF6E1AEFEDB000E07CF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F2AF9F1AEFEDE100E07CF7 /* RLDDirectNavigationCommand.swift in Sources */,
+				45F2AF9E1AEFEDE100E07CF7 /* RLDBreadcrumbNavigationCommand.swift in Sources */,
+				45F2AFA41AEFEDE100E07CF7 /* RLDNavigationSetup.swift in Sources */,
+				45F2AFA91AEFEDE100E07CF7 /* UIViewController+RLDNavigationHelper.swift in Sources */,
+				45F2AFA11AEFEDE100E07CF7 /* RLDNavigationCommand.swift in Sources */,
+				45F2AFA61AEFEDE100E07CF7 /* RLDPushPopNavigationCommand.swift in Sources */,
+				45F2AFA21AEFEDE100E07CF7 /* RLDNavigationCommand+NavigationCommandRegister.swift in Sources */,
+				45F2AFA01AEFEDE100E07CF7 /* RLDDirectNavigationCommand+PathSearching.swift in Sources */,
+				45F2AFA31AEFEDE100E07CF7 /* RLDNavigationCommandFactory.swift in Sources */,
+				45F2AFA71AEFEDE100E07CF7 /* UINavigationController+RLDNavigationSetup.swift in Sources */,
+				45F2AFA81AEFEDE100E07CF7 /* UIView+RLDNavigationHelper.swift in Sources */,
+				45F2AFA51AEFEDE100E07CF7 /* RLDNavigationSetup+RLDNavigationCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45F2AF891AEFEDB100E07CF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45F2AF721AEFEDB000E07CF7 /* RLDNavigationSwift */;
+			targetProxy = 45F2AF881AEFEDB100E07CF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		459E1B6F1AAE606300EC3C51 /* LaunchScreen.xib */ = {
@@ -329,6 +430,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -371,6 +473,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -407,6 +510,58 @@
 			};
 			name = Release;
 		};
+		45F2AF8D1AEFEDB100E07CF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 0.6.1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Navigation prototype/RLDNavigationSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		45F2AF8E1AEFEDB100E07CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 0.6.1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Navigation prototype/RLDNavigationSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -424,6 +579,15 @@
 			buildConfigurations = (
 				45537D851AAA7A3D0043F2D8 /* Debug */,
 				45537D861AAA7A3D0043F2D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45F2AF8C1AEFEDB100E07CF7 /* Build configuration list for PBXNativeTarget "RLDNavigationSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45F2AF8D1AEFEDB100E07CF7 /* Debug */,
+				45F2AF8E1AEFEDB100E07CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

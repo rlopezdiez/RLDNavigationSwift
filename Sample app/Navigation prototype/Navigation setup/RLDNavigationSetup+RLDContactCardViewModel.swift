@@ -1,4 +1,5 @@
 import UIKit
+import RLDNavigationSwift
 
 extension RLDNavigationSetup {
     init(viewModel:RLDContactCardViewModel, navigationController:UINavigationController) {

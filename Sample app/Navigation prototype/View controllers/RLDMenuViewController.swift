@@ -1,5 +1,5 @@
+import RLDNavigationSwift
 import UIKit
-import Foundation
 
 class RLDMenuViewController:UIViewController {
     
