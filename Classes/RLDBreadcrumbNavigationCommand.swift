@@ -1,8 +1,8 @@
 import Foundation
 
-class RLDBreadcrumbNavigationCommand:RLDNavigationCommand {
+public class RLDBreadcrumbNavigationCommand:RLDNavigationCommand {
     
-    override func execute() {
+    override public func execute() {
         var milestones = navigationSetup.breadcrumbs!
         milestones.append(navigationSetup.destination)
         

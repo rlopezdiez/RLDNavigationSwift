@@ -1,12 +1,12 @@
 import Foundation
 
-class RLDDirectNavigationCommand:RLDNavigationCommand {
+public class RLDDirectNavigationCommand:RLDNavigationCommand {
     
     private lazy var navigationCommandClassChain:[String] = { [unowned self] in
         return self.navigationCommandClassChainWithNavigationSetup(self.navigationSetup, availableCommandsClasses:self.availableCommandClasses)
         }()
     
-    override func execute() {
+    override public func execute() {
         
         if count(availableCommandClasses) == 0 {
             return

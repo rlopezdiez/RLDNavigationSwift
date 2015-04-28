@@ -1,22 +1,22 @@
 import Foundation
 
-class RLDNavigationCommand {
+public class RLDNavigationCommand {
     
-    class var origins:[String]? {
+    public class var origins:[String]? {
         return nil
     }
     
-    class var destination:String? {
+    public class var destination:String? {
         return nil
     }
     
-    var navigationSetup:RLDNavigationSetup
+    public var navigationSetup:RLDNavigationSetup
     
-    var completionClosure:(() -> Void)? = nil
+    public var completionClosure:(() -> Void)? = nil
     
     // MARK:Initialization
     
-    required init?(navigationSetup:RLDNavigationSetup, completionClosure:(() -> Void)?) {
+    required public init?(navigationSetup:RLDNavigationSetup, completionClosure:(() -> Void)?) {
         self.navigationSetup = navigationSetup
         self.completionClosure = completionClosure
         if self.dynamicType.canHandle(navigationSetup:navigationSetup) == false {
@@ -24,19 +24,19 @@ class RLDNavigationCommand {
         }
     }
     
-    convenience init?(navigationSetup:RLDNavigationSetup) {
+    convenience public init?(navigationSetup:RLDNavigationSetup) {
         self.init(navigationSetup:navigationSetup, completionClosure:nil)
     }
     
     // MARK:Suitability checking
     
-    class func canHandle(#navigationSetup:RLDNavigationSetup) -> Bool {
+    public class func canHandle(#navigationSetup:RLDNavigationSetup) -> Bool {
         return true
     }
     
     // MARK:Execution
     
-    func execute() {
+    public func execute() {
         if let completionClosure = completionClosure {
             completionClosure()
         }

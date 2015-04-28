@@ -1,10 +1,10 @@
 import UIKit
 
-class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
+public class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
 
     // MARK: Suitability checking
     
-    override class func canHandle(#navigationSetup:RLDNavigationSetup) -> Bool {
+    override public class func canHandle(#navigationSetup:RLDNavigationSetup) -> Bool {
         let isDestinationValid = NSClassFromString(navigationSetup.destination).isSubclassOfClass(NSClassFromString(destination))
         if isDestinationValid == false {
             return false
@@ -28,21 +28,21 @@ class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
         return true
     }
     
-    class var viewControllerStoryboardIdentifier:String? {
+    public class var viewControllerStoryboardIdentifier:String? {
         return nil
     }
     
-    class var nibName:String? {
+    public class var nibName:String? {
         return "Main"
     }
     
-    class var animatesTransitions:Bool {
+    public class var animatesTransitions:Bool {
         return true
     }
     
     // MARK:Execution
     
-    override func execute() {
+    override public func execute() {
         var finished = false
         CATransaction.begin()
         CATransaction.setCompletionBlock(completionClosure)

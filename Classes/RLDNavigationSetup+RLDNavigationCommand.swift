@@ -1,10 +1,10 @@
-extension RLDNavigationSetup {
+public extension RLDNavigationSetup {
 
-    func go() {
+    public func go() {
         go(completionClosure:nil)
     }
     
-    func go(#completionClosure:(() -> Void)?) {
+    public func go(#completionClosure:(() -> Void)?) {
         if let navigationCommand = RLDNavigationCommandFactory.navigationCommand(navigationSetup:self, completionClosure:completionClosure) {
             navigationCommand.execute()
         }

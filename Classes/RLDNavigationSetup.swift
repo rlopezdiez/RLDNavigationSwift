@@ -19,16 +19,15 @@
 import Foundation
 import UIKit
 
-struct RLDNavigationSetup {
+public struct RLDNavigationSetup {
+    public var origin:String
+    public var destination:String
+    public var properties:[String:AnyObject]?
+    public var breadcrumbs:[String]?
     
-    var origin:String
-    var destination:String
-    var properties:[String:AnyObject]?
-    var breadcrumbs:[String]?
+    public var navigationController:UINavigationController
     
-    var navigationController:UINavigationController
-    
-    init(destination:String,
+    public init(destination:String,
         navigationController:UINavigationController) {
             self.init(destination:destination,
                 properties:nil,
@@ -36,7 +35,7 @@ struct RLDNavigationSetup {
                 navigationController:navigationController)
     }
     
-    init(destination:String,
+    public init(destination:String,
         breadcrumbs:[String]?,
         navigationController:UINavigationController) {
             self.init(destination:destination,
@@ -45,7 +44,7 @@ struct RLDNavigationSetup {
                 navigationController:navigationController)
     }
     
-    init(destination:String,
+    public init(destination:String,
         properties:[String:AnyObject]?,
         navigationController:UINavigationController) {
             self.init(destination:destination,
@@ -54,7 +53,7 @@ struct RLDNavigationSetup {
                 navigationController:navigationController)
     }
     
-    init(destination:String,
+    public init(destination:String,
         properties:[String:AnyObject]?,
         breadcrumbs:[String]?,
         navigationController:UINavigationController) {
@@ -66,7 +65,7 @@ struct RLDNavigationSetup {
                 navigationController:navigationController)
     }
     
-    init(origin:String,
+    public init(origin:String,
         destination:String,
         properties:[String:AnyObject]?,
         breadcrumbs:[String]?,
