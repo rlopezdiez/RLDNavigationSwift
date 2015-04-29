@@ -31,7 +31,7 @@ You can implement more advanced navigation commands by subclassing `RLDNavigatio
 
 In order to find the most suitable navigation commands, `RLDNavigationCommandFactory` is used. You need to register your custom created navigation commands to make them available to the factory, using their `registerCommandClass()` class function.
 
-One he best way to make sure all your classes are ready when needed is registering them in the same place. You can use a registar class with a function that is called once in when the application has finished launching. The included sample app uses this approach:
+The best way to make sure all your classes are ready when needed is registering them in the same place. You can use a registar class with a function that is called once when the application has finished launching. The included sample app uses this approach:
 
 ```swift
 import Foundation
