@@ -30,7 +30,7 @@ public class RLDNavigationCommand {
     
     // MARK:Suitability checking
     
-    public class func canHandle(#navigationSetup:RLDNavigationSetup) -> Bool {
+    public class func canHandle(navigationSetup navigationSetup:RLDNavigationSetup) -> Bool {
         return true
     }
     

@@ -2,8 +2,8 @@ import RLDNavigationSwift
 
 class RLDContactCardViewModelNavigationCommand:RLDPushPopNavigationCommand {
     
-    override class func canHandle(#navigationSetup:RLDNavigationSetup) -> Bool {
-        if let viewModel = navigationSetup.properties?["viewModel"] as? RLDContactCardViewModel {
+    override class func canHandle(navigationSetup navigationSetup:RLDNavigationSetup) -> Bool {
+        if let _ = navigationSetup.properties?["viewModel"] as? RLDContactCardViewModel {
             return true
         } else {
             return false

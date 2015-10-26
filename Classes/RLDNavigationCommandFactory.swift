@@ -1,10 +1,10 @@
 class RLDNavigationCommandFactory {
 
-    class func navigationCommand(#navigationSetup:RLDNavigationSetup) -> RLDNavigationCommand? {
+    class func navigationCommand(navigationSetup navigationSetup:RLDNavigationSetup) -> RLDNavigationCommand? {
         return navigationCommand(navigationSetup:navigationSetup, completionClosure:nil)
     }
 
-    class func navigationCommand(#navigationSetup:RLDNavigationSetup, completionClosure:(() -> Void)?) -> RLDNavigationCommand? {
+    class func navigationCommand(navigationSetup navigationSetup:RLDNavigationSetup, completionClosure:(() -> Void)?) -> RLDNavigationCommand? {
         // We check if we are already at the destination
         let viewControllerToReturnTo = navigationSetup.navigationController.findDestination(navigationSetup:navigationSetup)
         if viewControllerToReturnTo != nil

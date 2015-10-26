@@ -3,10 +3,10 @@ import Foundation
 extension RLDDirectNavigationCommand {
     
     func navigationCommandClassChainWithNavigationSetup(navigationSetup:RLDNavigationSetup, availableCommandsClasses:[String]) -> [String] {
-        var originNavigationCommandClasses = navigationCommandClassesInClasses(availableCommandsClasses, origin:navigationSetup.origin, destination:nil)
+        let originNavigationCommandClasses = navigationCommandClassesInClasses(availableCommandsClasses, origin:navigationSetup.origin, destination:nil)
         let directNavigationCommandClasses = navigationCommandClassesInClasses(originNavigationCommandClasses, origin:navigationSetup.origin, destination:navigationSetup.destination)
         
-        if count(directNavigationCommandClasses) > 0 {
+        if directNavigationCommandClasses.count > 0 {
             return [directNavigationCommandClasses.first!]
         }
         
@@ -15,7 +15,7 @@ extension RLDDirectNavigationCommand {
 
         var lastNavigationCommandClassInChain:String?
         
-        while count(nextNavigationCommandClasses) > 0 {
+        while nextNavigationCommandClasses.count > 0 {
             let parentClass = nextNavigationCommandClasses.removeAtIndex(0)
             let parentClassType:RLDNavigationCommand.Type = NSClassFromString(parentClass) as! RLDNavigationCommand.Type
             
@@ -61,7 +61,6 @@ extension RLDDirectNavigationCommand {
     
     private func enumerateNavigationCommandClasses(navigationCommandClasses:[String], origin:String, destination:String?, closure:(navigationCommandClass:String, inout stop:Bool) -> Void) {
         var shouldStop = false
-        var found = false
         for navigationCommandClass in navigationCommandClasses {
             
             let navigationCommandType:RLDNavigationCommand.Type = NSClassFromString(navigationCommandClass) as! RLDNavigationCommand.Type
@@ -94,15 +93,15 @@ extension RLDDirectNavigationCommand {
         
     }
     
-    private func navigationCommandClassChain(#originNavigationCommandClasses:[String],linksBetweenNavigationCommands:[String:String], lastNavigationCommandClass:String) -> [String] {
+    private func navigationCommandClassChain(originNavigationCommandClasses originNavigationCommandClasses:[String],linksBetweenNavigationCommands:[String:String], lastNavigationCommandClass:String) -> [String] {
         var navigationCommandClassChain:[String] = []
         
         var nextClass:String? = lastNavigationCommandClass
         
-        do {
+        repeat {
             navigationCommandClassChain.insert(nextClass!, atIndex:0)
             
-            if contains(originNavigationCommandClasses, nextClass!) {
+            if originNavigationCommandClasses.contains((nextClass!)) {
                 break
             }
             

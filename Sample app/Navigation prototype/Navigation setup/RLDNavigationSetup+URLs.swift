@@ -23,7 +23,7 @@ extension RLDNavigationSetup {
             let path = urlComponents.path {
                 let pathComponents = path.componentsSeparatedByString("/")
                 var breadcrumbs = breadcrumbsFor(pathComponents:pathComponents)
-                if count(breadcrumbs) > 0 {
+                if breadcrumbs.count > 0 {
                     self.destination = breadcrumbs.removeLast()
                     self.properties = propertiesWith(query:urlComponents.query)
                     self.breadcrumbs = breadcrumbs
@@ -31,7 +31,7 @@ extension RLDNavigationSetup {
         }
     }
     
-    private func breadcrumbsFor(#pathComponents:[String]) -> [String] {
+    private func breadcrumbsFor(pathComponents pathComponents:[String]) -> [String] {
         var breadcrumbs:[String] = []
         for pathComponent in pathComponents {
             if let destination = self.dynamicType.pathComponentToDestination[pathComponent] {
@@ -43,7 +43,7 @@ extension RLDNavigationSetup {
         return breadcrumbs
     }
     
-    private func propertiesWith(#query:String?) -> [String:AnyObject]? {
+    private func propertiesWith(query query:String?) -> [String:AnyObject]? {
         if let query = query {
             var properties:[String:AnyObject] = [:]
             var keyOrValue: NSString?, key: String?, value: String?

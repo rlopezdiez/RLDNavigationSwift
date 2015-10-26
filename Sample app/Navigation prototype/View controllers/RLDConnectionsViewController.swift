@@ -10,7 +10,7 @@ class RLDConnectionsViewController:UIViewController {
         navigateToChat(userId:"2")
     }
     
-    private func navigateToChat(#userId:String) {
+    private func navigateToChat(userId userId:String) {
         self.goTo("NavigationPrototype.RLDChatViewController",
             properties:["userId":userId])
     }

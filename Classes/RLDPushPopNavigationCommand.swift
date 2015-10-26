@@ -4,8 +4,8 @@ public class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
 
     // MARK: Suitability checking
     
-    override public class func canHandle(#navigationSetup:RLDNavigationSetup) -> Bool {
-        let isDestinationValid = NSClassFromString(navigationSetup.destination).isSubclassOfClass(NSClassFromString(destination))
+    override public class func canHandle(navigationSetup navigationSetup:RLDNavigationSetup) -> Bool {
+        let isDestinationValid = NSClassFromString(navigationSetup.destination)!.isSubclassOfClass(NSClassFromString(destination!)!)
         if isDestinationValid == false {
             return false
         }
@@ -19,7 +19,7 @@ public class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
     private class func isOriginValid(originClass:String) -> Bool {
         if let origins = self.origins {
             for origin in origins {
-                if NSClassFromString(origin).isSubclassOfClass(NSClassFromString(originClass)) {
+                if NSClassFromString(origin)!.isSubclassOfClass(NSClassFromString(originClass)!) {
                     return true
                 }
             }
@@ -43,7 +43,6 @@ public class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
     // MARK:Execution
     
     override public func execute() {
-        var finished = false
         CATransaction.begin()
         CATransaction.setCompletionBlock(completionClosure)
 
@@ -62,10 +61,10 @@ public class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
         
         if (self.dynamicType.nibName != nil && self.dynamicType.viewControllerStoryboardIdentifier != nil) {
             let storyBoard:UIStoryboard = UIStoryboard(name:self.dynamicType.nibName!, bundle:nil)
-            viewControllerToPresent = storyBoard.instantiateViewControllerWithIdentifier(self.dynamicType.viewControllerStoryboardIdentifier!) as! UIViewController
+            viewControllerToPresent = storyBoard.instantiateViewControllerWithIdentifier(self.dynamicType.viewControllerStoryboardIdentifier!) 
         } else {
-            let destinationViewControllerClass:AnyClass = NSClassFromString(self.dynamicType.destination!)
-            viewControllerToPresent = (destinationViewControllerClass.alloc() as! UIViewController)
+            let destinationViewControllerClass:AnyObject.Type = NSClassFromString(self.dynamicType.destination!)!
+            viewControllerToPresent = (destinationViewControllerClass as! UIViewController.Type).init()
         }
         
         configure(viewController:viewControllerToPresent)
@@ -73,7 +72,7 @@ public class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
         navigationSetup.navigationController.pushViewController(viewControllerToPresent, animated:self.dynamicType.animatesTransitions)
     }
     
-    private func popTo(#viewController:UIViewController) {
+    private func popTo(viewController viewController:UIViewController) {
         if navigationSetup.navigationController.topViewController != viewController {
             navigationSetup.navigationController.popToViewController(viewController, animated:self.dynamicType.animatesTransitions)
         }
@@ -81,7 +80,7 @@ public class RLDPushPopNavigationCommand:RLDDirectNavigationCommand {
     
     // MARK: Destination view controller configuration
     
-    private func configure(#viewController:UIViewController) {
+    private func configure(viewController viewController:UIViewController) {
         viewController.loadView()
         viewController.set(properties:navigationSetup.properties)
     }

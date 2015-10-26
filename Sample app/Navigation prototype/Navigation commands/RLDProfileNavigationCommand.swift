@@ -2,7 +2,7 @@ import RLDNavigationSwift
 
 class RLDProfileNavigationCommand:RLDPushPopNavigationCommand {
     
-    override class func canHandle(#navigationSetup:RLDNavigationSetup) -> Bool {
+    override class func canHandle(navigationSetup navigationSetup:RLDNavigationSetup) -> Bool {
         var canHandleNavigationSetup = super.canHandle(navigationSetup:navigationSetup)
         
         if (canHandleNavigationSetup) {
