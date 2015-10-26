@@ -1,6 +1,6 @@
 import UIKit
 
-@objc class RLDContactCardViewModel {
+class RLDContactCardViewModel {
     
     var name:String?
     var surname:String?

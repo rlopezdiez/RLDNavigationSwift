@@ -2,9 +2,9 @@ import UIKit
 
 extension UINavigationController {
     
-    func findDestination(#navigationSetup:RLDNavigationSetup) -> UIViewController? {
+    func findDestination(navigationSetup navigationSetup:RLDNavigationSetup) -> UIViewController? {
         
-        for viewController:UIViewController in reverse(viewControllers as! [UIViewController]) {
+        for viewController:UIViewController in Array((viewControllers ).reverse()) {
             if viewController.isDestinationOf(navigationSetup) {
                 return viewController
             }
@@ -18,7 +18,7 @@ extension UINavigationController {
 private extension UIViewController {
     
     func isDestinationOf(navigationSetup:RLDNavigationSetup) -> Bool {
-        if self.isKindOfClass(NSClassFromString(navigationSetup.destination)) == false {
+        if self.isKindOfClass(NSClassFromString(navigationSetup.destination)!) == false {
             return false
         }
         
@@ -36,12 +36,12 @@ private extension UIViewController {
 
 extension NSObject {
     
-    func has(#property:String) -> Bool {
+    func has(property property:String) -> Bool {
         let expectedProperty = objcProperty(name:property)
         return expectedProperty != nil
     }
     
-    func canSet(#property:String) -> Bool {
+    func canSet(property property:String) -> Bool {
         var canSet = false
         let expectedProperty = objcProperty(name:property)
         if expectedProperty != nil {
@@ -51,7 +51,7 @@ extension NSObject {
         return canSet
     }
     
-    func set(#properties:[String:AnyObject]?) {
+    func set(properties properties:[String:AnyObject]?) {
         if let properties = properties {
             for (key, value) in properties {
                 if canSet(property:key) {
@@ -61,16 +61,16 @@ extension NSObject {
         }
     }
     
-    private func objcProperty(#name:String) -> objc_property_t {
+    private func objcProperty(name name:String) -> objc_property_t {
         
-        if count(name) == 0 {
+        if name.characters.count == 0 {
             return nil
         }
         
         var propertyCount:UInt32 = 0
         var sourceClass:AnyClass? = self.dynamicType
         
-        do {
+        repeat {
             let objcProperties:UnsafeMutablePointer<objc_property_t> = class_copyPropertyList(sourceClass, &propertyCount)
             for index in 0..<Int(propertyCount) {
                 let property:objc_property_t = objcProperties[index]

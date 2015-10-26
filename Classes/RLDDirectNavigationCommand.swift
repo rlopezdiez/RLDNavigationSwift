@@ -8,7 +8,7 @@ public class RLDDirectNavigationCommand:RLDNavigationCommand {
     
     override public func execute() {
         
-        if count(availableCommandClasses) == 0 {
+        if availableCommandClasses.count == 0 {
             return
         }
         
@@ -19,7 +19,7 @@ public class RLDDirectNavigationCommand:RLDNavigationCommand {
             let navigationCommandType = NSClassFromString(navigationCommandClass) as! RLDNavigationCommand.Type
             navigationSetup.destination = navigationCommandType.destination!
             
-            let navigationCommand = navigationCommandType(navigationSetup:navigationSetup, completionClosure:nil)!
+            let navigationCommand = navigationCommandType.init(navigationSetup:navigationSetup, completionClosure:nil)!
             
             if let lastNavigationCommand = navigationCommands.last {
                 lastNavigationCommand.completionClosure = {

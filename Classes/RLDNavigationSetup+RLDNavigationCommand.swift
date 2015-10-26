@@ -4,7 +4,7 @@ public extension RLDNavigationSetup {
         go(completionClosure:nil)
     }
     
-    public func go(#completionClosure:(() -> Void)?) {
+    public func go(completionClosure completionClosure:(() -> Void)?) {
         if let navigationCommand = RLDNavigationCommandFactory.navigationCommand(navigationSetup:self, completionClosure:completionClosure) {
             navigationCommand.execute()
         }
